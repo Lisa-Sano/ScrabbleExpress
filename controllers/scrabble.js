@@ -8,7 +8,7 @@ var ScrabbleController = {
     locals.chart = scrabble.letter_scores;
     res.render('chart', locals);
   },
-  score: function(req, res, next) {
+  scored: function(req, res, next) {
     var locals = {};
     var word = req.params.word
     locals.title = 'Scrabble Express Word Score';

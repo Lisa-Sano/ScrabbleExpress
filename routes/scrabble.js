@@ -6,6 +6,6 @@ var Controller = require('../controllers/scrabble')
 router.get('/chart', Controller.chart);
 
 /* GET word score page. */
-router.get('/score/:word', Controller.score);
+router.get('/score/:word', Controller.scored);
 
 module.exports = router;
