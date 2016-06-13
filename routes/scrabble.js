@@ -8,8 +8,9 @@ router.get('/chart', function(req, res, next) {
 
 /* GET word score page. */
 router.get('/score/:word', function(req, res, next) {
+  var locals = {};
   locals.title = 'Scrabble Express Word Score';
-  locals.word = request.params.word;
+  locals.word = req.params.word;
   res.render('score', locals);
 });
 
