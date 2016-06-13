@@ -14,7 +14,7 @@ var ScrabbleController = {
     locals.title = 'Scrabble Express Word Score';
     locals.word = word;
     locals.score = scrabble.score(word);
-    res.render('score', locals);
+    res.render('scored', locals);
   }
 }
 
