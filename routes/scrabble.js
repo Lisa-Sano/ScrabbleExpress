@@ -1,17 +1,11 @@
 var express = require('express');
 var router = express.Router();
+var Controller = require('../controllers/scrabble')
 
 /* GET chart page. */
-router.get('/chart', function(req, res, next) {
-  res.render('chart', { title: 'Scrabble Express Chart' });
-});
+router.get('/chart', Controller.chart);
 
 /* GET word score page. */
-router.get('/score/:word', function(req, res, next) {
-  var locals = {};
-  locals.title = 'Scrabble Express Word Score';
-  locals.word = req.params.word;
-  res.render('score', locals);
-});
+router.get('/score/:word', Controller.score);
 
 module.exports = router;
