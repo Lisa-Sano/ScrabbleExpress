@@ -5,6 +5,7 @@ var ScrabbleController = {
   chart: function(req, res, next) {
     var locals = {};
     locals.title = 'Scrabble Express Chart'
+    locals.chart = scrabble.letter_scores
     res.render('chart', locals);
   },
   score: function(req, res, next) {
