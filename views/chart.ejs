@@ -5,13 +5,17 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+    <nav>
+      <a href='/'>Home</a>
+      <a href='/scrabble/score'>Score a Word</a>
+    </nav>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
     <p>Letter scores are:</p>
-    <p>
+    <div>
     <% for (var i in chart) { %>
       <p><%= i + ': ' + chart[i] %></p>
     <% } %>
-    </p>
+    </div>
   </body>
 </html>
